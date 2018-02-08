@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TravelBlog: discover new places around the world</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Quickly Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='css/blog.css') }}" rel="stylesheet" type="text/css" media="all" />
+</head>
+
+<body>
+<!-- banner-body -->
+	<div class="banner-body">
+		<div class="container">
+<!-- header -->
+			<div class="header">
+				<div class="header-nav">
+					<nav class="navbar navbar-default">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+						  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						  </button>
+						   <a class="navbar-brand"><span>T</span>ravel<span>B</span>log</a>
+                                                </div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+						</div><!-- /.navbar-collapse -->
+					</nav>
+				</div>
+			</div>
+<!-- //header -->
+<!-- header-bottom -->
+	<div class="header-bottom">
+		<div class="header-bottom-top">
+		</div>
+		<div class="clearfix"> </div>
+<!-- blog -->
+			<div class="blog">
+				<div class="blog-left">
+                                {% block content %}
+
+                                {% endblock %}
+      	</div>
+				<div class="blog-right">
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+<!-- //blog -->
+	</div>
+<!-- //header-bottom -->
+		</div>
+	</div>
+<!-- //banner-body -->
+<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-grids">
+				<div class="col-md-4 footer-grid">
+					<h3>Don't forget</h3>
+					<div class="footer-grd-left">
+                                            <img src="{{ url_for('static', filename='img/11.jpeg') }}" class="img-responsive" alt=" " />
+					</div>
+					<div class="footer-grd-left">
+						<p>Voyager, c'est naître et mourir à chaque instant. <br> Victor Hugo</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<h3>Useful links</h3>
+					<ul>
+						<li><a target="_blank" href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/">Conseils aux voyageurs</a></li>
+						<li><a target="_blank" href="https://www.diplomatie.gouv.fr/fr/conseils-aux-voyageurs/conseils-par-pays/">Conseils par pays</a></li>
+						<li><a target="_blank" href="https://www.pasteur.fr/fr/centre-medical/preparer-son-voyage">Vaccination</a></li>
+						<li><a target="_blank" href="https://flightaware.com">Check your flight</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 footer-grid">
+					<h3>Plan your trip</h3>
+					<ul>
+						<li><a target="_blank" href="https://www.skyscanner.com">Skyscanner</a></li>
+						<li><a target="_blank" href="https://matrix.itasoftware.com">Matrix ITA</a></li>
+						<li><a target="_blank" href="https://www.booking.com/">Booking</a></li>
+						<li><a target="_blank" href="https://www.airbnb.com">Airbnb</a></li>
+						<li><a target="_blank" href="https://www.couchsurfing.com">Couchsurfing</a></li>
+						<li><a target="_blank" href="https://www.chapkadirect.fr/">Chapka</a></li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+</body>
+</html>

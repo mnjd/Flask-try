@@ -3,3 +3,4 @@ venv/
 *.pyo
 *.pyc
 __pycache__
+app/bak

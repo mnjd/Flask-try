@@ -2,10 +2,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+import psycopg2
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/Manoj/AgilityFactory/Formation/Flask-essai/app/blog.db'
+POSTGRES = {
+    'user': 'postgres',
+    'pw': 'postgres1234',
+    'db': 'blogpost',
+    'host': 'localhost',
+    'port': '5432',
+}
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://%(user)s:\
+%(pw)s@%(host)s:%(port)s/%(db)s' % POSTGRES
 
 db = SQLAlchemy(app)
 
